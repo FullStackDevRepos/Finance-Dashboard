@@ -7,7 +7,7 @@ import { themeSettings } from "./theme";
 import Navbar from "@/scenes/navbar";
 import Dashboard from "@/scenes/dashboard";
 
-// There 
+// There are two routes
 function App() {
 
   // Get theme and expanded-theme class for css
@@ -15,6 +15,7 @@ function App() {
 
   return (
     <div className="app">
+
       <BrowserRouter>
         <ThemeProvider theme={theme}>
           <CssBaseline />
