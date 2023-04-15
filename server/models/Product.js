@@ -5,7 +5,6 @@ import { loadType } from "mongoose-currency";
 const Schema = mongoose.Schema;
 loadType(mongoose);
 
-
 const ProductSchema = new Schema(
   {
     price: {
