@@ -10,7 +10,8 @@ import kpiRoutes from "./routes/kpi.js"
 import KPI from "./models/KPI.js";
 import { kpis } from "./data/data.js";
 
-// Configurations
+// Configurations: helmet for security threats, 
+
 dotenv.config();
 const app = express();
 app.use(express.json());
@@ -18,11 +19,17 @@ app.use(helmet());
 app.use(helmet.crossOriginResourcePolicy({
   policy: "cross-origin"
 }));
+
+// middleware to log HTTPS requests, errors and simplifies the process
 app.use(morgan("common"))
+
+// Processes data in an HTTP request body: JSON, TEXT, URL-encoded
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({
   extended: false
 }));
+
+// Enables communicate between the frontend and backend on the same origin.
 app.use(cors());
 
 // Routes 

@@ -144,7 +144,7 @@ const Row1 = () => {
       <DashboardBox gridArea="b">
         <BoxHeader
           title={"Profit and Revenue"}
-          subtitle="top line represents revenue, bottom line represents expenses"
+          subtitle="top line represents revenue, bottom line represents profit"
           sideText={"+4%"}
         />
         <ResponsiveContainer width="100%" height="100%">
@@ -195,6 +195,7 @@ const Row1 = () => {
           </LineChart>
         </ResponsiveContainer>
       </DashboardBox>
+
       <DashboardBox gridArea="c">
         <BoxHeader
           title={"Revenue Month by Month"}

@@ -10,7 +10,7 @@ import Dashboard from "@/scenes/dashboard";
 // There are two routes
 function App() {
 
-  // Get theme and expanded-theme class for css
+  // Get theme and expanded-theme class for css which fire once until updated.
   const theme = useMemo(() => createTheme(themeSettings), [])
 
   return (
