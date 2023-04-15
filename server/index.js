@@ -8,10 +8,11 @@ import morgan from "morgan";
 
 import kpiRoutes from "./routes/kpi.js"
 import KPI from "./models/KPI.js";
-import { kpis } from "./data/data.js";
+import { kpis, products } from "./data/data.js";
+import productRoutes from "./routes/product.js"
+import Product from "./models/Product.js";
 
 // Configurations: helmet for security threats, 
-
 dotenv.config();
 const app = express();
 app.use(express.json());
@@ -20,10 +21,10 @@ app.use(helmet.crossOriginResourcePolicy({
   policy: "cross-origin"
 }));
 
-// middleware to log HTTPS requests, errors and simplifies the process
+// middleware to log HTTPS requests, errors and simplifies the process.
 app.use(morgan("common"))
 
-// Processes data in an HTTP request body: JSON, TEXT, URL-encoded
+// Processes data in an HTTP request body: JSON, TEXT, URL-encoded.
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({
   extended: false
@@ -34,6 +35,7 @@ app.use(cors());
 
 // Routes 
 app.use("/kpi", kpiRoutes);
+app.use("/product", productRoutes);
 
 // Mongoose Setup
 const PORT = process.env.PORT || 9000;
@@ -48,5 +50,6 @@ mongoose
     /* Add Data As Needed */
     // await mongoose.connection.db.dropDatabase();
     // KPI.insertMany(kpis);
+    // Product.insertMany(products);
   })
   .catch((error) => console.log(`${error} did not connect`));
