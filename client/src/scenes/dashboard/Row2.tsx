@@ -31,7 +31,7 @@ const Row2 = () => {
 
   const { data: operationalData } = useGetKpisQuery();
   const { data: productData } = useGetProductsQuery();
-  console.log("data:", operationalData);
+  
 
   // OperationalExpenses
   const operationalExpenses = useMemo(() => {
