@@ -72,6 +72,7 @@ const Dashboard = () => {
             gridTemplateAreas: gridTemplateSmallScreens,
           }
       }
+      
     >
       <Row1 />
       <Row2 />

@@ -19,6 +19,7 @@ import { kpis, products, transactions } from "./data/data.js";
 // Configurations: helmet for security threats, 
 dotenv.config();
 const app = express();
+
 app.use(express.json());
 app.use(helmet());
 app.use(helmet.crossOriginResourcePolicy({

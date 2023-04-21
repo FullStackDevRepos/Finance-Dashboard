@@ -7,7 +7,7 @@ loadType(mongoose);
 
 const daySchema = new Schema(
   {
-     date: String,
+    date: String,
     revenue: {
       type: mongoose.Types.Currency,
       currency: "USD",
