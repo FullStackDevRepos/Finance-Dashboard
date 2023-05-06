@@ -169,7 +169,7 @@ const Row3 = () => {
                   stroke="none"
                   data={data}
                   innerRadius={18}
-                  outerRadius={38}
+                  outerRadius={35}
                   paddingAngle={2}
                   dataKey="value"
                 >
